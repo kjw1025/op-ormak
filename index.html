@@ -45,6 +45,10 @@
   <!-- css reset -->
   <link rel="stylesheet" href="css/reset.css">
 
+  <!-- swiper -->
+  <link rel="stylesheet" href="js/swiper/swiper.min.css">
+  <script src="js/swiper/swiper.min.js"></script>
+
   <!-- 사용자 지정 -->
   <link rel="stylesheet" href="css/main.css">
   <script src="js/script.js"></script>
@@ -71,7 +75,23 @@
     <!-- visual -->
     <section class="visual">
       <div class="inner">
-        
+
+        <!-- swiper visual slide -->
+        <div class="swiper-container sw-visual">
+
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#" class="sw-v-1"></a></div>
+            <div class="swiper-slide"><a href="#" class="sw-v-2"></a></div>
+            <div class="swiper-slide"><a href="#" class="sw-v-3"></a></div>
+          </div>
+
+          <!-- swipr pg -->
+          <div class="sw-visual-control">
+            <div class="swiper-pagination sw-visual-pg"></div>
+          </div>
+
+        </div>
+
       </div>
     </section>
     <!-- //visual -->
@@ -79,15 +99,109 @@
     <!-- main contents -->
     <section class="main-contents">
       <div class="inner">
-        
+        <h3>이달의 베스트</h3>
+        <div class="bestbox">
+
+          <div class="b-box-content">
+            <a href="#" class="bbox-1">
+              <span>오르막 떡볶이 - 매콤짜장</span>
+            </a>
+            <span>8,500원</span>
+          </div>
+
+          <div class="b-box-content">
+            <a href="#" class="bbox-2">
+              <span>오르막떡볶이 - 오리지널</span>
+            </a>
+            <span>7,500원</span>
+          </div>
+
+          <div class="b-box-content">
+            <a href="#" class="bbox-3">
+              <span>오르막 떡볶이 - 매콤로제</span>
+            </a>
+            <span>9,000원</span>
+          </div>
+
+        </div>
+        <h3>신상품</h3>
+        <div class="newbox">
+
+          <div class="n-box-content">
+            <a href="#" class="nbox-1">
+              <span>오르막 김말이</span>
+            </a>
+            <span>3,900원</span>
+            <div class="soldout"></div>
+          </div>
+          <div class="n-box-content">
+            <a href="#" class="nbox-2">
+              <span>오르막 어묵튀김</span>
+            </a>
+            <span>2,900원</span>
+            <div class="soldout"></div>
+          </div>
+          <div class="n-box-content">
+            <a href="#" class="nbox-3">
+              <span>오르막 야끼만두</span>
+            </a>
+            <span>3,500원</span>
+            <div class="soldout"></div>
+          </div>
+
+        </div>
+
+
+        <div class="newbox">
+
+          <div class="n-box-content">
+            <a href="#" class="nbox-4">
+              <span>오르막떡볶이 - 오리지널</span>
+            </a>
+            <span>7,500원</span>
+          </div>
+          <div class="n-box-content">
+            <a href="#" class="nbox-5">
+              <span>오르막 떡볶이 - 매콤짜장</span>
+            </a>
+            <span>8,500원</span>
+          </div>
+          <div class="n-box-content">
+            <a href="#" class="nbox-6">
+              <span>오르막 떡볶이 - 매콤로제</span>
+            </a>
+            <span>9,000원</span>
+          </div>
+
+        </div>
+
+
+
       </div>
     </section>
     <!-- main contents -->
 
     <!-- footer -->
-    <footer>
+    <footer class="footer">
       <div class="inner">
 
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이용안내</a></li>
+        </ul>
+
+        <div class="company-information">
+          <p>대표이사: 유경태,윤하늘 전화: <a href="#"><b>032-463-1025</b></a></p>
+          <p>이메일: <a href="#"><b>Ourpick@Naver.Com</b></a></p>
+          <p>주소: 인천광역시 연수구 송도미래로 30 (송도동) 송도 BRC 스마트밸리 지식산업센터 D동 2202호</p>
+          <p>회사명: 주식회사 아워픽</p>
+          <p>통신판매업: 2020-인천남동구-0211</p>
+          <p>사업자번호 4528801358<a href="#">[사업자정보확인]</a></p>
+        </div>
+
+        <p class="copyright">Copyright © <span>오르막떡볶이</span> All Rights Reserved.</p>
       </div>
     </footer>
     <!-- //footer -->

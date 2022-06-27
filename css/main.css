@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -35,21 +36,27 @@ body {
   margin: 0 auto;
 }
 
+.clearfix {
+  content: "";
+  position: relative;
+  display: block;
+  clear: both;
+}
+
 /* 개별영역*/
-/* header */
+/*== header ==*/
 .header {
   position: relative;
   display: block;
+  z-index: 9999;
 }
 .header .inner {
   position: relative;
   display: block;
   height: 138px;
-  background-color: green;
   padding: 19px 16px;
 }
-
-.l-top-menu {
+.header .l-top-menu {
   position: relative;
   display: block;
   width: 22px;
@@ -58,8 +65,7 @@ body {
   background-size: cover;
   float: left;
 }
-
-.logo {
+.header .logo {
   position: relative;
   display: block;
   width: 86px;
@@ -69,8 +75,7 @@ body {
   float: left;
   margin-left: 20px;
 }
-
-.r-top-shop {
+.header .r-top-shop {
   position: relative;
   display: block;
   width: 22px;
@@ -78,4 +83,243 @@ body {
   background: url("../images/r-top-Cart.jpg") no-repeat center;
   background-size: cover;
   float: right;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*==///// header ==*/
+/*== visual ==*/
+.visual {
+  position: relative;
+  display: block;
+}
+.visual .swiper-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 1708px;
+}
+.visual .swiper-slide a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.visual .sw-v-1 {
+  background: url("../images/visual-slide-1.jpeg") no-repeat center;
+  background-size: cover;
+}
+.visual .sw-v-2 {
+  background: url("../images/visual-slide-2.jpeg") no-repeat center;
+  background-size: cover;
+}
+.visual .sw-v-3 {
+  background: url("../images/visual-slide-3.jpeg") no-repeat center;
+  background-size: cover;
+}
+.visual .sw-visual-control {
+  position: absolute;
+  bottom: 20px;
+  display: block;
+  width: 100%;
+  z-index: 9;
+}
+.visual .sw-visual-pg {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+.visual .swiper-pagination-bullet {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  margin: 0 5px;
+}
+.visual .swiper-pagination-bullet:hover {
+  opacity: 1;
+  background: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.visual .swiper-pagination-bullet-active {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+
+/*== ////visual ==*/
+/*== main contents ==*/
+.main-contents {
+  position: relative;
+  display: block;
+}
+.main-contents .inner {
+  position: relative;
+  display: block;
+}
+.main-contents .inner h3 {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.bestbox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.b-box-content {
+  position: relative;
+  display: block;
+  width: 33%;
+  height: 640px;
+}
+.b-box-content a {
+  position: relative;
+  display: block;
+  height: 90%;
+}
+.b-box-content a > span {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  display: block;
+}
+.b-box-content .bbox-1 {
+  background: url("../images/main content 1.jpg") no-repeat center;
+  background-size: cover;
+}
+.b-box-content .bbox-2 {
+  background: url("../images/main content 2.jpg") no-repeat center;
+  background-size: cover;
+}
+.b-box-content .bbox-3 {
+  background: url("../images/main content 3.jpg") no-repeat center;
+  background-size: cover;
+}
+.b-box-content > span {
+  position: relative;
+  display: block;
+  margin-top: 45px;
+}
+
+.newbox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+
+.n-box-content {
+  position: relative;
+  display: block;
+  width: 33%;
+  height: 640px;
+}
+.n-box-content a {
+  position: relative;
+  display: block;
+  height: 90%;
+}
+.n-box-content a > span {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  display: block;
+}
+.n-box-content .nbox-1 {
+  background: url("../images/newbox-content.1.jpg") no-repeat center;
+  background-size: cover;
+}
+.n-box-content .nbox-2 {
+  background: url("../images/newbox-content.2.jpg") no-repeat center;
+  background-size: cover;
+}
+.n-box-content .nbox-3 {
+  background: url("../images/newbox-content.3.jpg") no-repeat center;
+  background-size: cover;
+}
+.n-box-content .nbox-4 {
+  background: url("../images/main content 2.jpg") no-repeat center;
+  background-size: cover;
+}
+.n-box-content .nbox-5 {
+  background: url("../images/main content 1.jpg") no-repeat center;
+  background-size: cover;
+}
+.n-box-content .nbox-6 {
+  background: url("../images/main content 3.jpg") no-repeat center;
+  background-size: cover;
+}
+.n-box-content > span {
+  position: relative;
+  display: block;
+  margin-top: 45px;
+}
+.n-box-content .soldout {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 16px;
+  background: url("../images/ico_product_soldout.gif") no-repeat center;
+  background-size: cover;
+}
+
+/*== ////main contents ==*/
+/*== footer ==*/
+.footer {
+  position: relative;
+  display: block;
+}
+.footer > .inner {
+  position: relative;
+  display: block;
+  height: 195px;
+  text-align: center;
+  font-size: 11px;
+  color: #999999;
+  letter-spacing: 0.6px;
+}
+.footer ul {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 11px;
+  margin-bottom: 30px;
+}
+.footer ul > li {
+  position: relative;
+  display: inline-block;
+  margin: 0 8px;
+}
+.footer .company-information p {
+  position: relative;
+  display: block;
+  line-height: 15px;
+}
+.footer a {
+  color: #999999;
+}
+.footer a:hover {
+  border-bottom: 1px solid #999999;
+}
+.footer .copyright {
+  position: relative;
+  display: block;
+  margin-top: 25px;
+}
+.footer .copyright span {
+  color: #000;
+}
+
+/*== ////footer ==*//*# sourceMappingURL=main.css.map */
