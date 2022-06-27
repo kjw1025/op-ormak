@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -24,4 +25,57 @@ html {
 
 body {
   font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 공통영역 */
+.inner {
+  position: relative;
+  display: block;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* 개별영역*/
+/* header */
+.header {
+  position: relative;
+  display: block;
+}
+.header .inner {
+  position: relative;
+  display: block;
+  height: 138px;
+  background-color: green;
+  padding: 19px 16px;
+}
+
+.l-top-menu {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url("../images/l-top-icon.png") no-repeat center;
+  background-size: cover;
+  float: left;
+}
+
+.logo {
+  position: relative;
+  display: block;
+  width: 86px;
+  height: 30px;
+  background: url("../images/logo.jpg") no-repeat center;
+  background-size: cover;
+  float: left;
+  margin-left: 20px;
+}
+
+.r-top-shop {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url("../images/r-top-Cart.jpg") no-repeat center;
+  background-size: cover;
+  float: right;
 }/*# sourceMappingURL=main.css.map */
