@@ -44,6 +44,62 @@ body {
 }
 
 /* 개별영역*/
+/*== 메인 gnb ==*/
+.maingnb {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 360px;
+  height: 100%;
+  background-color: green;
+  z-index: 999999;
+}
+.maingnb .close-bt {
+  position: absolute;
+  top: 13px;
+  right: 16px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../images/btn_close.png") no-repeat center;
+  background-size: 30px auto;
+}
+.maingnb p {
+  font-size: 12px;
+  line-height: 0;
+  padding: 55px 16px 20px 29px;
+}
+.maingnb .gnb-category {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0px;
+}
+.maingnb .gnb-category li {
+  position: relative;
+  padding: 11px 110px 3px 29px;
+}
+.maingnb .gnb-info {
+  padding: 50px 0px 0px 29px;
+}
+.maingnb .gnb-info li a {
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.menu-dim {
+  position: fixed;
+  display: block;
+  left: 0px;
+  top: 0;
+  right: 0px;
+  bottom: 0px;
+  z-index: 300;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/*== //메인 gnb ==*/
 /*== header ==*/
 .header {
   position: relative;
