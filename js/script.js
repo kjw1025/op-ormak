@@ -1,15 +1,19 @@
 // html, css, js 로딩완료
 $(document).ready(function () {
+  // modal 기능
+  let modalWrap = $(".modal-wrap");
+  let modalClose = "modal-close-active";
+  let modalCloseBt = $(".modal-close");
 
+  modalCloseBt.click(() => {
+    modalWrap.addClass(modalClose);
+  });
 });
-
-
 
 // html, css, js, 멀티미디어까지 로딩완료
 window.onload = function () {
-
   // visual 슬라이드
-  new Swiper('.sw-visual', {
+  new Swiper(".sw-visual", {
     loop: true,
     autoplay: {
       delay: 1000,
@@ -20,34 +24,30 @@ window.onload = function () {
 
     // pg
     pagination: {
-      el: '.sw-visual-pg',
-    }
+      el: ".sw-visual-pg",
+    },
   });
 
-
   // 메뉴 열기 기능
-  $('.l-top-menu').click(function (e) {
+  $(".l-top-menu").click(function (e) {
     e.preventDefault();
-    $('.maingnb').toggleClass('maingnb-open');
-    $('.menu-dim').toggleClass('menu-dim-open');
+    $(".maingnb").toggleClass("maingnb-open");
+    $(".menu-dim").toggleClass("menu-dim-open");
   });
 
   // 메뉴 닫기 기능
-  $('.close-bt').click(function (e) {
+  $(".close-bt").click(function (e) {
     e.preventDefault();
-    $('.maingnb').removeClass('maingnb-open');
-    $('.menu-dim').removeClass('menu-dim-open');
+    $(".maingnb").removeClass("maingnb-open");
+    $(".menu-dim").removeClass("menu-dim-open");
   });
 
-  $('.menu-dim').click(function (e) {
+  $(".menu-dim").click(function (e) {
     e.preventDefault();
-    $('.maingnb').removeClass('maingnb-open');
-    $('.menu-dim').removeClass('menu-dim-open');
+    $(".maingnb").removeClass("maingnb-open");
+    $(".menu-dim").removeClass("menu-dim-open");
   });
 };
-
-
-
 
 // 모바일 메뉴 기능
 // .mb-bt 를 저장해서 활용하자.

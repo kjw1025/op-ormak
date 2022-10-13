@@ -1,4 +1,12 @@
 @charset "utf-8";
+/* 프리텐다드 */
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 
 * {
   margin: 0;
@@ -26,9 +34,8 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
-
 
 /* 공통영역 */
 .inner {
@@ -39,17 +46,153 @@ body {
 }
 
 .clearfix {
-  content: '';
+  content: "";
   position: relative;
   display: block;
   // width: 100%;
   clear: both;
 }
 
-
 /* 개별영역*/
 
+/*  ==== Modal Popup ==== */
+.modal-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999999999;
 
+  transition: all 0.5s;
+}
+
+.modal-close-active {
+  opacity: 0;
+  visibility: hidden;
+}
+.modal-main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 10px 50px;
+
+  font-family: "Pretendard-Regular";
+}
+
+/* top */
+.modal-top {
+  position: relative;
+  display: block;
+}
+.modal-title {
+  position: relative;
+  display: block;
+  width: 80%;
+  height: 40px;
+
+  background-color: #29306a;
+  border-radius: 5px;
+  margin: 10px auto;
+
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.modal-top ul {
+  position: relative;
+  display: block;
+}
+.modal-top ul::after {
+  content: "🔥 문제시 연락해주시면 삭제하겠습니다.";
+
+  font-size: 14px;
+  color: #c25151;
+}
+.modal-top ul li {
+  position: relative;
+  display: block;
+
+  line-height: 25px;
+}
+.modal-top ul li span {
+  color: #67af55;
+  font-weight: 600;
+}
+.modal-top ul li .modal-email {
+  color: #29306a;
+}
+/* middle */
+.modal-middle {
+  position: relative;
+  display: block;
+
+  margin: 20px 0;
+}
+.modal-subTitle {
+  position: relative;
+  display: block;
+
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.modal-middle ul {
+  position: relative;
+  display: block;
+}
+.modal-middle ul li {
+  line-height: 25px;
+}
+/* bottom */
+.modal-bottom {
+  position: relative;
+  display: block;
+
+  margin: 20px 0;
+}
+.modal-bottom p {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.modal-bottom p span {
+  color: #4285f4;
+}
+.modal-close {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+
+  background-color: #fff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-size: 20px;
+
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.modal-close:hover {
+  background-color: #67af55;
+  color: #fff;
+}
+/*  ==== /// Modal Popup ==== */
 
 /*== 메인 gnb ==*/
 .maingnb {
@@ -63,7 +206,6 @@ body {
   z-index: 9999999;
   transition: all 0.5s;
 
-
   .close-bt {
     position: absolute;
     top: 13px;
@@ -71,7 +213,7 @@ body {
     display: block;
     width: 30px;
     height: 30px;
-    background: url('../images/btn_close.png') no-repeat center;
+    background: url("../images/btn_close.png") no-repeat center;
     background-size: 30px auto;
   }
 
@@ -127,11 +269,6 @@ body {
 
 /*== //메인 gnb ==*/
 
-
-
-
-
-
 /*== header ==*/
 .header {
   position: relative;
@@ -150,7 +287,7 @@ body {
     display: block;
     width: 22px;
     height: 22px;
-    background: url('../images/l-top-icon.png') no-repeat center;
+    background: url("../images/l-top-icon.png") no-repeat center;
     background-size: cover;
     float: left;
   }
@@ -160,7 +297,7 @@ body {
     display: block;
     width: 86px;
     height: 30px;
-    background: url('../images/logo.jpg') no-repeat center;
+    background: url("../images/logo.jpg") no-repeat center;
     background-size: cover;
     float: left;
     margin-left: 20px;
@@ -171,7 +308,7 @@ body {
     display: block;
     width: 22px;
     height: 22px;
-    background: url('../images/r-top-Cart.jpg') no-repeat center;
+    background: url("../images/r-top-Cart.jpg") no-repeat center;
     background-size: cover;
     float: right;
   }
@@ -200,17 +337,17 @@ body {
   }
 
   .sw-v-1 {
-    background: url('../images/visual-slide-1.jpeg') no-repeat center;
+    background: url("../images/visual-slide-1.jpeg") no-repeat center;
     background-size: cover;
   }
 
   .sw-v-2 {
-    background: url('../images/visual-slide-2.jpeg') no-repeat center;
+    background: url("../images/visual-slide-2.jpeg") no-repeat center;
     background-size: cover;
   }
 
   .sw-v-3 {
-    background: url('../images/visual-slide-3.jpeg') no-repeat center;
+    background: url("../images/visual-slide-3.jpeg") no-repeat center;
     background-size: cover;
   }
 
@@ -233,7 +370,7 @@ body {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 5px;
     margin: 0 5px;
 
@@ -249,13 +386,12 @@ body {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
   }
 }
 
 /*== ////visual ==*/
-
 
 /*== main contents ==*/
 .main-contents {
@@ -295,7 +431,7 @@ body {
     display: block;
     height: 90%;
 
-    >span {
+    > span {
       position: absolute;
       bottom: -30px;
       left: 0;
@@ -304,21 +440,21 @@ body {
   }
 
   .bbox-1 {
-    background: url('../images/main\ content\ 1.jpg') no-repeat center;
+    background: url("../images/main\ content\ 1.jpg") no-repeat center;
     background-size: cover;
   }
 
   .bbox-2 {
-    background: url('../images/main\ content\ 2.jpg') no-repeat center;
+    background: url("../images/main\ content\ 2.jpg") no-repeat center;
     background-size: cover;
   }
 
   .bbox-3 {
-    background: url('../images/main\ content\ 3.jpg') no-repeat center;
+    background: url("../images/main\ content\ 3.jpg") no-repeat center;
     background-size: cover;
   }
 
-  >span {
+  > span {
     position: relative;
     display: block;
     margin-top: 45px;
@@ -343,7 +479,7 @@ body {
     display: block;
     height: 90%;
 
-    >span {
+    > span {
       position: absolute;
       bottom: -30px;
       left: 0;
@@ -352,36 +488,36 @@ body {
   }
 
   .nbox-1 {
-    background: url('../images/newbox-content.1.jpg') no-repeat center;
+    background: url("../images/newbox-content.1.jpg") no-repeat center;
     background-size: cover;
   }
 
   .nbox-2 {
-    background: url('../images/newbox-content.2.jpg') no-repeat center;
+    background: url("../images/newbox-content.2.jpg") no-repeat center;
     background-size: cover;
   }
 
   .nbox-3 {
-    background: url('../images/newbox-content.3.jpg') no-repeat center;
+    background: url("../images/newbox-content.3.jpg") no-repeat center;
     background-size: cover;
   }
 
   .nbox-4 {
-    background: url('../images/main\ content\ 2.jpg') no-repeat center;
+    background: url("../images/main\ content\ 2.jpg") no-repeat center;
     background-size: cover;
   }
 
   .nbox-5 {
-    background: url('../images/main\ content\ 1.jpg') no-repeat center;
+    background: url("../images/main\ content\ 1.jpg") no-repeat center;
     background-size: cover;
   }
 
   .nbox-6 {
-    background: url('../images/main\ content\ 3.jpg') no-repeat center;
+    background: url("../images/main\ content\ 3.jpg") no-repeat center;
     background-size: cover;
   }
 
-  >span {
+  > span {
     position: relative;
     display: block;
     margin-top: 45px;
@@ -394,21 +530,19 @@ body {
     display: block;
     width: 30px;
     height: 16px;
-    background: url('../images/ico_product_soldout.gif') no-repeat center;
+    background: url("../images/ico_product_soldout.gif") no-repeat center;
     background-size: cover;
   }
 }
 
 /*== ////main contents ==*/
 
-
-
 /*== footer ==*/
 .footer {
   position: relative;
   display: block;
 
-  >.inner {
+  > .inner {
     position: relative;
     display: block;
     height: 195px;
@@ -425,11 +559,10 @@ body {
     height: 11px;
     margin-bottom: 30px;
 
-    >li {
+    > li {
       position: relative;
       display: inline-block;
       margin: 0 8px;
-
     }
   }
 
