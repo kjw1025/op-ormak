@@ -1,0 +1,51 @@
+{
+  "bastFood": [
+    {
+      "foodimg": "main_content_1.jpg",
+      "foodTitle": "오르막 떡볶이 - 매콤짜장",
+      "foodPrice": "8,500원"
+    },
+    {
+      "foodimg": "main_content_2.jpg",
+      "foodTitle": "오르막 떡볶이 - 오리지널",
+      "foodPrice": "7,500원"
+    },
+    {
+      "foodimg": "main_content_3.jpg",
+      "foodTitle": "오르막 떡볶이 - 매콤로제",
+      "foodPrice": "9,000원"
+    }
+  ],
+  "newFood": [
+    {
+      "foodimg": "newbox-content_1.jpg",
+      "foodTitle": "오르막 김말이",
+      "foodPrice": "3,900원"
+    },
+    {
+      "foodimg": "newbox-content_2.jpg",
+      "foodTitle": "오르막 어묵튀김",
+      "foodPrice": "2,900원"
+    },
+    {
+      "foodimg": "newbox-content_3.jpg",
+      "foodTitle": "오르막 야끼만두",
+      "foodPrice": "3,500원"
+    },
+    {
+      "foodimg": "main_content_2.jpg",
+      "foodTitle": "오르막떡볶이 - 오리지널",
+      "foodPrice": "7,500원"
+    },
+    {
+      "foodimg": "main_content_1.jpg",
+      "foodTitle": "오르막 떡볶이 - 매콤짜장",
+      "foodPrice": "8,500원"
+    },
+    {
+      "foodimg": "main_content_3.jpg",
+      "foodTitle": "오르막 떡볶이 - 매콤로제",
+      "foodPrice": "9,000원"
+    }
+  ]
+}

@@ -4,7 +4,6 @@ $(document).ready(function () {
   let modalWrap = $(".modal-wrap");
   let modalClose = "modal-close-active";
   let modalCloseBt = $(".modal-close");
-
   modalCloseBt.click(() => {
     modalWrap.addClass(modalClose);
   });
@@ -47,15 +46,42 @@ window.onload = function () {
     $(".maingnb").removeClass("maingnb-open");
     $(".menu-dim").removeClass("menu-dim-open");
   });
+
+  // === 데이터 통신 ===
+  let dataArr = [];
+
+  // 데이터 받기
+  function fetchData() {
+    axios
+      .get("data/foodList.json")
+      .then((res) => {
+        dataArr.push(res.data.bastFood);
+        dataArr.push(res.data.newFood);
+
+        makeFoodItem(0, "food-container1");
+        makeFoodItem(1, "food-container2");
+      })
+      .catch((err) => console.log(err));
+  }
+  fetchData();
+
+  // 데이터 출력
+  function makeFoodItem(_index, _parentId) {
+    let data = dataArr[_index];
+    let tempHtml = "";
+
+    for (i = 0; i < data.length; i++) {
+      temp = `
+              <div class="food-item">
+                <a href="#">
+                  <img src="images/${data[i].foodimg}" alt="음식사진" />
+                  <p class="food-item-title">${data[i].foodTitle}</p>
+                </a>
+                <span class="food-item-price">${data[i].foodPrice}</span>
+              </div>
+      `;
+      tempHtml += temp;
+    }
+    document.getElementById(_parentId).innerHTML = tempHtml;
+  }
 };
-
-// 모바일 메뉴 기능
-// .mb-bt 를 저장해서 활용하자.
-// $('.mb-bt').click(function (e) {
-//   e.preventDefault();
-//   $(this).toggleClass('mb-bt-open');
-//   $('.mb-dim').toggleClass('mb-dim-open');
-//   $('.mb-wrap').toggleClass('mb-wrap-open');
-// });
-
-// $('.mb-bt').removeClass('mb-bt-open');

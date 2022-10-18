@@ -38,11 +38,20 @@ body {
 }
 
 /* 공통영역 */
+.wrap {
+  position: relative;
+  display: block;
+}
 .inner {
   position: relative;
   display: block;
   width: 1200px;
   margin: 0 auto;
+}
+@media all and (max-width: 1200px) {
+  .inner {
+    width: 100%;
+  }
 }
 
 .clearfix {
@@ -192,6 +201,11 @@ body {
   background-color: #67af55;
   color: #fff;
 }
+@media all and (max-width: 650px) {
+  .modal-main {
+    width: 92.3vw;
+  }
+}
 /*  ==== /// Modal Popup ==== */
 
 /*== 메인 gnb ==*/
@@ -267,6 +281,15 @@ body {
   display: block;
 }
 
+@media all and (max-width: 450px) {
+  .maingnb {
+    left: -450px;
+    width: 100%;
+  }
+  .maingnb-open {
+    left: 0;
+  }
+}
 /*== //메인 gnb ==*/
 
 /*== header ==*/
@@ -322,11 +345,11 @@ body {
   display: block;
 
   // swiper 구역
-  .swiper-container {
+  .sw-visual {
     position: relative;
     display: block;
     width: 100%;
-    height: 1708px;
+    // height: 1708px;
   }
 
   .swiper-slide a {
@@ -334,21 +357,12 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-  }
 
-  .sw-v-1 {
-    background: url("../images/visual-slide-1.jpeg") no-repeat center;
-    background-size: cover;
-  }
-
-  .sw-v-2 {
-    background: url("../images/visual-slide-2.jpeg") no-repeat center;
-    background-size: cover;
-  }
-
-  .sw-v-3 {
-    background: url("../images/visual-slide-3.jpeg") no-repeat center;
-    background-size: cover;
+    img {
+      position: relative;
+      display: block;
+      width: 100%;
+    }
   }
 
   .sw-visual-control {
@@ -399,9 +413,6 @@ body {
   display: block;
 
   .inner {
-    position: relative;
-    display: block;
-
     h3 {
       position: relative;
       display: block;
@@ -414,124 +425,74 @@ body {
   }
 }
 
-.bestbox {
+//
+.food-container {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-}
+  width: 100%;
 
-.b-box-content {
-  position: relative;
-  display: block;
-  width: 33%;
-  height: 640px;
-
-  a {
+  .food-item {
     position: relative;
-    display: block;
-    height: 90%;
+    display: inline-block;
+    width: 33%;
 
-    > span {
-      position: absolute;
-      bottom: -30px;
-      left: 0;
+    a {
+      position: relative;
       display: block;
+      width: 100%;
+
+      img {
+        position: relative;
+        display: block;
+        width: 100%;
+      }
+      p {
+        position: relative;
+        display: block;
+        padding-top: 15px;
+
+        font-size: 15px;
+      }
+    }
+    span {
+      position: relative;
+      display: block;
+      margin-top: 13px;
+      font-size: 13px;
     }
   }
-
-  .bbox-1 {
-    background: url("../images/main\ content\ 1.jpg") no-repeat center;
-    background-size: cover;
-  }
-
-  .bbox-2 {
-    background: url("../images/main\ content\ 2.jpg") no-repeat center;
-    background-size: cover;
-  }
-
-  .bbox-3 {
-    background: url("../images/main\ content\ 3.jpg") no-repeat center;
-    background-size: cover;
-  }
-
-  > span {
-    position: relative;
-    display: block;
-    margin-top: 45px;
-  }
 }
+.food-container#food-container2 {
+  margin-bottom: 70px;
+  .food-item {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-bottom: 60px;
 
-.newbox {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 65px;
-}
-
-.n-box-content {
-  position: relative;
-  display: block;
-  width: 33%;
-  height: 640px;
-
-  a {
-    position: relative;
-    display: block;
-    height: 90%;
-
-    > span {
-      position: absolute;
-      bottom: -30px;
-      left: 0;
-      display: block;
+      span::after {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 0;
+        display: block;
+        width: 30px;
+        height: 16px;
+        background: url("../images/ico_product_soldout.gif") no-repeat center;
+        background-size: cover;
+      }
     }
   }
+}
 
-  .nbox-1 {
-    background: url("../images/newbox-content.1.jpg") no-repeat center;
-    background-size: cover;
-  }
-
-  .nbox-2 {
-    background: url("../images/newbox-content.2.jpg") no-repeat center;
-    background-size: cover;
-  }
-
-  .nbox-3 {
-    background: url("../images/newbox-content.3.jpg") no-repeat center;
-    background-size: cover;
-  }
-
-  .nbox-4 {
-    background: url("../images/main\ content\ 2.jpg") no-repeat center;
-    background-size: cover;
-  }
-
-  .nbox-5 {
-    background: url("../images/main\ content\ 1.jpg") no-repeat center;
-    background-size: cover;
-  }
-
-  .nbox-6 {
-    background: url("../images/main\ content\ 3.jpg") no-repeat center;
-    background-size: cover;
-  }
-
-  > span {
-    position: relative;
-    display: block;
-    margin-top: 45px;
-  }
-
-  .soldout {
-    position: absolute;
-    bottom: -40px;
-    left: 0;
-    display: block;
-    width: 30px;
-    height: 16px;
-    background: url("../images/ico_product_soldout.gif") no-repeat center;
-    background-size: cover;
+@media all and (max-width: 1200px) {
+  .food-container {
+    padding: 0 20px;
+    .food-item {
+      width: 30%;
+    }
   }
 }
 
