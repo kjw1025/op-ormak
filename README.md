@@ -9,4 +9,4 @@
 ##### 사용기술 : Html, CSS, JavaScript
 ###### 라이브러리 : axios, jquery, swiper
 
-<img src="[https://user-images.githubusercontent.com/107607247/196362191-d8f5cbed-05a2-4a06-bbcd-120e1d4633dd.png](https://user-images.githubusercontent.com/107607247/196364002-92a37460-9017-4d99-9905-08b4a77c1b7a.png)"  width="300px">
+<img src="https://user-images.githubusercontent.com/107607247/196364002-92a37460-9017-4d99-9905-08b4a77c1b7a.png"  width="300px">
